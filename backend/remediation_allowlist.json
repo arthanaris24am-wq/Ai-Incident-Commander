@@ -1,0 +1,57 @@
+{
+  "ALLOWED_SERVICES": [
+    "Docker",
+    "MySQL",
+    "PostgreSQL",
+    "Redis",
+    "MongoDB",
+    "Nginx"
+  ],
+  "ALLOWED_APPLICATIONS": [
+    {
+      "name": "Frontend",
+      "executable": "npm",
+      "working_directory": "/app/frontend",
+      "restart_allowed": true
+    },
+    {
+      "name": "Backend",
+      "executable": "python",
+      "working_directory": "/app/backend",
+      "restart_allowed": true
+    }
+  ],
+  "ALLOWED_CLEANUP_PATHS": [
+    "/tmp",
+    "/var/log/app",
+    "C:\\temp"
+  ],
+  "ALLOWED_PROCESSES": [
+    "node.exe",
+    "python.exe",
+    "mysqld.exe",
+    "postgres.exe"
+  ],
+  "ALLOWED_ACTIONS": [
+    "START_DOCKER_DESKTOP",
+    "WAIT_FOR_DOCKER_ENGINE",
+    "START_CONTAINER",
+    "RESTART_CONTAINER",
+    "START_SERVICE",
+    "RESTART_SERVICE",
+    "START_APPLICATION",
+    "RESTART_APPLICATION",
+    "CLEAN_TEMP_FILES",
+    "CLEAN_APPROVED_LOGS",
+    "CLEAN_APPROVED_CACHE",
+    "RECONNECT_DATABASE",
+    "START_DATABASE_SERVICE",
+    "RESTART_DATABASE_SERVICE",
+    "RESTART_APPROVED_PROCESS",
+    "REFRESH_DNS",
+    "RECONNECT_NETWORK_INTERFACE",
+    "REANALYZE_INCIDENT",
+    "VERIFY_INCIDENT",
+    "NONE"
+  ]
+}
